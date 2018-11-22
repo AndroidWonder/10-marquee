@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <!-- For this TextView the deprecated attribute singleLine allows the marquee to work.
+         Using maxLines instead as suggested doesn't work for long text.-->
+
+    <TextView
+        android:id="@+id/scroller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#FF00FF00"
+        android:textSize="24sp"
+        android:text="@string/calculator"
+        android:layout_marginTop="16dp"
+        android:ellipsize="marquee"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:padding="16dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        />
+
+    <EditText
+        android:id="@+id/mealprice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFF0000"
+        android:text="Calculate Tip" />
+
+    <TextView
+        android:id="@+id/answer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+</LinearLayout>
